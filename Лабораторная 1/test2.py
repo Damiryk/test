@@ -3,6 +3,6 @@ pages = 100  # Количество страниц в книге
 lines = 50  # Число строк на странице
 symbols = 25  # Количество символов в строке
 byte_v_simbol = 4  # Сколько в одном символе байтов
-volume = pages*lines*symbols*byte_v_simbol  # Объем
-size = 2**20 * 1.44
+volume = pages * lines * symbols * byte_v_simbol  # Объем
+size = 2 ** 20 * 1.44
 print("Количество книг, помещающихся на дискету:", int(size // volume))
