@@ -1,15 +1,13 @@
-
 def count_letters(text):
-    znaki = ' .,?!-;—:…\n'
-    lower_text = main_str.lower()
-    new_text = []
-    new_text2 = []
-    for item in lower_text:
-        if item not in znaki and item not in new_text:
-            new_text.append(item)
-    for item in new_text:
-        new_text2.append(lower_text.count(item))
-    result = dict(zip(new_text, new_text2))
+    text_lower = text.lower()
+
+    result = {}
+    for item in text_lower:
+        if item.isalpha():
+            if item in result:
+                result[item] += 1
+            else:
+                result[item] = 1
 
     return result
 
@@ -21,6 +19,9 @@ def calculate_frequency(result):
         result_calculate[key] = char / total
 
     return result_calculate
+
+# TODO Напишите функцию calculate_frequency
+
 
 main_str = """
 У лукоморья дуб зелёный;
@@ -63,4 +64,3 @@ letter_calculate = calculate_frequency(letter_total)
 
 for letter, value in letter_calculate.items():
     print(f"{letter}: {value:.2f}")
-
