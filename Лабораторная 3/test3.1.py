@@ -1,7 +1,7 @@
 def poisk(spisok, tovar):
-    for i in spisok:
-        if i == tovar:
-            return spisok.index(i)
+    for index, value  in enumerate(spisok):
+        if value == tovar:
+            return index
     return None
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
